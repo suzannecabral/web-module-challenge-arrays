@@ -203,13 +203,24 @@ For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolat
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
+console.log("--------- #5: filterByWord ---------");
 
-function filterByWord(/*code here*/){
+// console.log(originalFlavors);
+function filterByWord(baseArray,userString){
 
-    /*code here*/
+    const newArray = [];
+    for(i = 0; i <= baseArray.length-1; i++){
+
+        if(baseArray[i].includes(userString)){
+            newArray.push(baseArray[i]);
+            // console.log(baseArray[i]);
+        }
+    }
+    console.log(newArray);
 
 }
 
+filterByWord(originalFlavors,"Chocolate");
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
