@@ -139,9 +139,11 @@ function removeFlavorByName(baseArray,flavorName){
     // console.log(baseArray.length);
     // console.log(baseArray);
 
-    for(let i = baseArray.length; i > 0, i--;){
-        console.log(`[${i}] ${baseArray[i]}`);
-    }
+    console.log(baseArray);
+    
+//    for(let i = baseArray.length; i > 0, i--;){
+//         console.log(`[${i}] ${baseArray[i]}`);
+//     }
     console.log(`----------REMOVED [${flavorIndex}] ${baseArray[flavorIndex]}----------`);
 
     //console.log(`baseArray has [${baseArray.length}] flavors`);
@@ -153,12 +155,13 @@ function removeFlavorByName(baseArray,flavorName){
     //baseArray.splice(baseArray[flavorIndex+2],1);
     baseArray.splice(flavorIndex,1);
 
+    console.log("AFTER");
+    console.log(baseArray);
 
-
-
-    for(let i = baseArray.length; i > 0, i--;){
-        console.log(`[${i}] ${baseArray[i]}`);
-    }
+    // for(let i = baseArray.length; i > 0, i--;){
+    //     console.log(`[${i}] ${baseArray[i]}`);
+        
+    // }
     
     //after
     // console.log(baseArray[5]);
@@ -176,6 +179,8 @@ Your function should accept:
 2 arguments 1 for your new array and one for your original array
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
+
+
 console.log("--------- #5: copy ---------");
 
 function copy(newArray, baseArray){
@@ -209,7 +214,7 @@ console.log("--------- #5: filterByWord ---------");
 function filterByWord(baseArray,userString){
 
     const newArray = [];
-    for(i = 0; i <= baseArray.length-1; i++){
+    for(i = 0; i <= baseArray.length; i++){
 
         if(baseArray[i].includes(userString)){
             newArray.push(baseArray[i]);
