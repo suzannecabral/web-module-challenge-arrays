@@ -130,12 +130,44 @@ Hint: You can use .splice() for this
 console.log("--------- #5: removeFlavorByName ---------");
 
 function removeFlavorByName(baseArray,flavorName){
-    console.log(`Before: ${baseArray}`);
-    baseArray.splice(baseArray[baseArray.indexOf(flavorName)],1);
-    console.log(`After: ${baseArray}`);
+    
+    const flavorIndex = baseArray.indexOf(flavorName);
+    //console.log(baseArray.indexOf(flavorName));
+
+    //before
+    // console.log("BEFORE: " + baseArray);
+    // console.log(baseArray.length);
+    // console.log(baseArray);
+
+    for(let i = baseArray.length; i > 0, i--;){
+        console.log(`[${i}] ${baseArray[i]}`);
+    }
+    console.log(`----------REMOVED [${flavorIndex}] ${baseArray[flavorIndex]}----------`);
+
+    //console.log(`baseArray has [${baseArray.length}] flavors`);
+    //console.log(`Removing ${baseArray[flavorIndex]} [${flavorIndex}]`);
+    //console.log(baseArray[flavorIndex]);
+
+
+    //removing flavor
+    //baseArray.splice(baseArray[flavorIndex+2],1);
+    baseArray.splice(flavorIndex,1);
+
+
+
+
+    for(let i = baseArray.length; i > 0, i--;){
+        console.log(`[${i}] ${baseArray[i]}`);
+    }
+    
+    //after
+    // console.log(baseArray[5]);
+    // console.log("AFTER: " + baseArray);
+    // console.log(baseArray.length);
+
 }
 
-removeFlavorByName(originalFlavors,"Vanilla");
+removeFlavorByName(originalFlavors,"Rocky Road");
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
