@@ -40,16 +40,19 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-console.log("--------- #1: is31Flavors ---------");
-function is31Flavors(testArray){
-    
-    console.log(testArray.length===31);
+// function is31Flavors(testArray){
+//     console.log(testArray);
+// }
+
+// const newFlavors = ["Mint", "Orange Cream", "Pineapple"];
 
 
-}
-const not31Flavors = ["mint","pineapple","orange cream"];
+//is31Flavors(originalFlavors);
+//is31Flavors(newFlavors);
+console.log("test:");
 
-is31Flavors(originalFlavors);
+
+
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -62,18 +65,11 @@ Your function should add the flavor to the front of the array and console.log th
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
 
+function addFlavor(/*code here*/){
 
-console.log("--------- #2: addFlavor ---------");
-
-function addFlavor(baseArray, newFlavor){
-    //let newArray = baseArray;
-    baseArray.unshift(newFlavor);
-    console.log(baseArray);
-    console.log(`I added ${newFlavor}, now there are ${baseArray.length}`);
+    /*code here*/
 
 }
-addFlavor(originalFlavors,"Rainbow Sherbet");
-
 
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -86,17 +82,11 @@ Your function should remove a flavor from the end of the array and console.log t
 
 For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
 
-console.log("--------- #3: removeLastFlavor ---------");
-function removeLastFlavor(baseArray){
-    //let newArray = baseArray;
-    console.log(`Flavors before [${baseArray.length}]: ${baseArray}`);
-    baseArray.pop();
-    console.log("Last Flavor Removed");
-    console.log(`Flavors after [${baseArray.length}]: ${baseArray}`);
-    
-}
+function removeLastFlavor(/*code here*/){
 
-removeLastFlavor(originalFlavors);
+    /*code here*/
+
+}
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -106,14 +96,12 @@ Your function should accept:
 (2) an index
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
-console.log("--------- #4: getFlavorByIndex ---------");
-function getFlavorByIndex(baseArray,itemIndex){
 
-    console.log(originalFlavors[itemIndex]);
+function getFlavorByIndex(/*code here*/){
+
+    /*code here*/
 
 }
-
-getFlavorByIndex(originalFlavors, 2);
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
@@ -127,50 +115,13 @@ For example, removeFlavorByName(originalFlavors, "Vanilla") would return an arra
 Hint: You can use .splice() for this
 
 */
-console.log("--------- #5: removeFlavorByName ---------");
 
-function removeFlavorByName(baseArray,flavorName){
-    
-    const flavorIndex = baseArray.indexOf(flavorName);
-    //console.log(baseArray.indexOf(flavorName));
+function removeFlavorByName(/*code here*/){
 
-    //before
-    // console.log("BEFORE: " + baseArray);
-    // console.log(baseArray.length);
-    // console.log(baseArray);
-
-    console.log(baseArray);
-    
-//    for(let i = baseArray.length; i > 0, i--;){
-//         console.log(`[${i}] ${baseArray[i]}`);
-//     }
-    console.log(`----------REMOVED [${flavorIndex}] ${baseArray[flavorIndex]}----------`);
-
-    //console.log(`baseArray has [${baseArray.length}] flavors`);
-    //console.log(`Removing ${baseArray[flavorIndex]} [${flavorIndex}]`);
-    //console.log(baseArray[flavorIndex]);
-
-
-    //removing flavor
-    //baseArray.splice(baseArray[flavorIndex+2],1);
-    baseArray.splice(flavorIndex,1);
-
-    console.log("AFTER");
-    console.log(baseArray);
-
-    // for(let i = baseArray.length; i > 0, i--;){
-    //     console.log(`[${i}] ${baseArray[i]}`);
-        
-    // }
-    
-    //after
-    // console.log(baseArray[5]);
-    // console.log("AFTER: " + baseArray);
-    // console.log(baseArray.length);
+    /*code here*/
 
 }
 
-removeFlavorByName(originalFlavors,"Vanilla");
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
@@ -180,19 +131,11 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
+function copy(/*code here*/){
 
-console.log("--------- #5: copy ---------");
-
-function copy(newArray, baseArray){
-
-    newArray = baseArray;
-    console.log(newArray);
-    return newArray;
-    
+    /*code here*/
 
 }
-
-copy("newFlavorList",originalFlavors);
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -208,24 +151,21 @@ For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolat
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
-console.log("--------- #5: filterByWord ---------");
 
-// console.log(originalFlavors);
-function filterByWord(baseArray,userString){
+function filterByWord(arr, string){
 
-    const newArray = [];
-    for(i = 0; i <= baseArray.length; i++){
-
-        if(baseArray[i].includes(userString)){
-            newArray.push(baseArray[i]);
-            // console.log(baseArray[i]);
-        }
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++){
+        arr[i].includes(string);
     }
-    console.log(newArray);
+
+    
+
+
+
 
 }
 
-filterByWord(originalFlavors,"Chocolate");
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
